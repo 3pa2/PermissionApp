@@ -5,7 +5,6 @@ import { Permission as PermissionApi } from "@/core/api/permission"
 @Component
 export default class Permission extends Vue {
 
-  public tableData: any;
   public permissionsData: any;
   constructor() {
     super();
@@ -13,14 +12,13 @@ export default class Permission extends Vue {
   }
 
   async mounted() {
-    this.permissionsData = await PermissionApi.getPermission();
+    const data =  await PermissionApi.getPermission();
+    this.permissionsData = data.data;
   }
 
   edit(index: number, data: PermissionModel[]) {
     const id = data[index].id;
     this.$router.push(`/edit/${id}`);
-
-    console.log(index, data);
   }
 
   remove(index: number, data: PermissionModel[]) {

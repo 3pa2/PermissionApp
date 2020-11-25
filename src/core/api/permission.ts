@@ -2,12 +2,12 @@ import axios from "axios";
 
 export class Permission {
     public static async getPermission() {
-        return await axios.get("https://localhost:44331/api/" + 'permission/all');
+        return await axios.get("http://localhost:5001/api" + '/permission/all');
     }
     public static async savePermission(data: any) {
         return await axios({
             method: 'POST',
-                url: "https://localhost:44331/api/permission",
+                url: "http://localhost:5001/api/permission",
                     data: data,
                     
         });
@@ -16,7 +16,7 @@ export class Permission {
     public static async deletePermission(data: any) {
         return await axios({
             method: 'PATCH',
-                url: "https://localhost:44331/api/permission",
+                url: "http://localhost:5001/api/permission",
                     data: data,
                     
         });
@@ -25,7 +25,7 @@ export class Permission {
     public static async get(id:any) {
         return await axios({
             method: 'GET',
-                url: "https://localhost:44331/api/permission/" + id,
+                url: "http://localhost:44331/api/permission/" + id,
                     
         });
     }

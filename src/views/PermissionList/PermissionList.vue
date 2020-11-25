@@ -10,22 +10,22 @@
             :data="permissionsData"
             style="width: 100%">
             <el-table-column
-              prop="employee.name"
+              prop="name"
               label="Nombre"
               width="180">
             </el-table-column>
             <el-table-column
-              prop="employee.lastName"
+              prop="lastName"
               label="Apellido"
               width="180">
             </el-table-column>
             <el-table-column
-              prop="type"
+              prop="permissionTypeName"
               label="Tipo"
               width="180">
             </el-table-column>
             <el-table-column
-              prop="date"
+              prop="requestDate"
               label="Fecha"
               width="180">
             </el-table-column>

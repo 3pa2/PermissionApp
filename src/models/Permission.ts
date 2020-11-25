@@ -4,10 +4,12 @@ import { Employee } from './Employee';
 export class Permission {
     id?: string;
     employee: Employee = {};
-    permissionType?: PermissionType;
+    permissionType: PermissionType = {};
     requestDate?: Date;
 
     constructor() {
         this.employee = new Employee();
+        this.permissionType = new PermissionType();
+
     }
 }

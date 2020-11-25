@@ -1,4 +1,4 @@
-export interface PermissionType {
-    id: string;
-    description:string;
+export class PermissionType {
+    id?: string;
+    description?:string;
 }

@@ -21,15 +21,12 @@ export default class Permission extends Vue {
 
   constructor() {
     super();
-    this.permission = {} as PermissionEmployee;
+    this.permission = new PermissionEmployee();
     this.permission.employee = {} as Employee;
   }
 
   async save() {
-    debugger;
-    await PermissionApi.savePermission(this.permission);
-    
-
+    await PermissionApi.savePermission(this.permission); 
     this.$router.push({ name: "List" });
   }
 

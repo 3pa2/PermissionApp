@@ -33,14 +33,20 @@
               <validation-provider rules="required" v-slot="{ errors }">
                 <el-input
                   placeholder="Tipo Permisso"
-                  v-model="permission.permissionType">
+                  v-model="permission.permissionType.description">
                 </el-input>
                 <span>{{ errors[0] }}</span>
                 <div style="height:20px;"></div>
               </validation-provider>
 
-              <validation-provider rules="required" v-slot="{ errors }">
-            
+             <validation-provider rules="required" v-slot="{ errors }">
+                <el-date-picker
+                  style="width:100%;"
+                  v-model="permission.requestDate"
+                  type="datetime"
+                  placeholder="Fecha de solicitud de permiso"
+                  :picker-options="pickerOptions" >
+                </el-date-picker>
                 <span>{{ errors[0] }}</span>
                 <div style="height:30px;"></div>       
               </validation-provider>
